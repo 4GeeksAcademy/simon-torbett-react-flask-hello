@@ -1,19 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import "../../styles/navbar.css"
 
 export const Navbar = () => {
-	return (
-		<nav className="navbar navbar-light bg-light">
-			<div className="container">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
-					</Link>
-				</div>
-			</div>
-		</nav>
+    return ( 
+
+	<>	
+	<div className="grad-bar"></div>
+  	<nav className="navbar">
+    <h4>Simon Torbett</h4>
+    
+    <ul className="nav no-search">
+      <li className="nav-item"><a href="#">Home</a></li>
+	  <Link to="/Login">
+      <li className="nav-item"><a href="#">Registro/Login</a>
+	  </li>
+      </Link>
+      <li className="nav-item"><a href="#">Logout</a></li>
+      
+	</ul>
+	</nav>
+	</>
 	);
 };
